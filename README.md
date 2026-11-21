@@ -148,6 +148,9 @@ https://raw.githubusercontent.com/zwtqc/dsh-disk-checkup/main/index.json
 3. 搜索 `磁盘体检` 或 `disk`，点安装
 4. 重启 DSH（或用 Plugins 页面提示的方式生效）
 
+> 需要你的 DSH 启用了插件市场（Discover / `plugin-market`）。如果界面里没有 Discover，
+> 用下面的方式 B 或 C。
+
 ### 方式 B：本地目录
 
 ```

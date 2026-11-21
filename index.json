@@ -1,0 +1,73 @@
+{
+    "format":  1,
+    "title":  {
+                  "en":  "zwtqc DSH plugins",
+                  "zh":  "zwtqc DSH 插件源"
+              },
+    "description":  {
+                        "en":  "Plugins for DeepSeek Harness maintained by zwtqc.",
+                        "zh":  "zwtqc 维护的 DeepSeek Harness 插件。"
+                    },
+    "metadata":  {
+                     "categories":  {
+                                        "system":  {
+                                                       "title":  {
+                                                                     "en":  "System tools",
+                                                                     "zh":  "系统工具"
+                                                                 }
+                                                   }
+                                    },
+                     "labels":  {
+
+                                },
+                     "sortKeys":  {
+
+                                  }
+                 },
+    "plugins":  [
+                    {
+                        "name":  "dsh-disk-checkup",
+                        "title":  {
+                                      "en":  "Disk checkup",
+                                      "zh":  "磁盘体检"
+                                  },
+                        "description":  {
+                                            "en":  "Scans drive C, lists cleanable items with sizes and safety notes, and removes the selected ones in one click from a left-sidebar panel.",
+                                            "zh":  "扫描 C 盘，在左侧边栏面板里列出可清理项及其体积、说明与删除影响，勾选后一键清理。"
+                                        },
+                        "icon":  "icon.svg",
+                        "author":  "zwtqc",
+                        "homepage":  "https://github.com/zwtqc/dsh-disk-checkup",
+                        "repository":  {
+                                           "url":  "https://github.com/zwtqc/dsh-disk-checkup"
+                                       },
+                        "metadata":  {
+                                         "category":  "system",
+                                         "keywords":  [
+                                                          "disk",
+                                                          "cleanup",
+                                                          "c-drive",
+                                                          "windows",
+                                                          "磁盘",
+                                                          "清理",
+                                                          "磁盘体检",
+                                                          "缓存"
+                                                      ]
+                                     },
+                        "versions":  [
+                                         {
+                                             "version":  "1.0.0",
+                                             "publishTimestamp":  1795295627,
+                                             "source":  {
+                                                            "type":  "git",
+                                                            "url":  "https://github.com/zwtqc/dsh-disk-checkup",
+                                                            "commit":  "24343285bf7fd30155355ac5aa0d1978d1b6c5d3"
+                                                        },
+                                             "engines":  {
+                                                             "dsh":  "\u003e=0.2.0"
+                                                         }
+                                         }
+                                     ]
+                    }
+                ]
+}
