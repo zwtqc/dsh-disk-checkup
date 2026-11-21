@@ -1,0 +1,4 @@
+- insert:
+    - id: disk-checkup
+      name: 'dsh-disk-checkup'
+      config: {}

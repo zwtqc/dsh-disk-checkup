@@ -1,0 +1,55 @@
+{
+  "name": "dsh-disk-checkup",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "C drive health check for DeepSeek Harness: a left-sidebar panel with a visual report and one-click cleanup.",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "disk",
+    "cleanup",
+    "c-drive",
+    "windows",
+    "磁盘体检",
+    "清理"
+  ],
+  "license": "MIT",
+  "author": "zwtqc",
+  "homepage": "https://github.com/zwtqc/dsh-disk-checkup#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zwtqc/dsh-disk-checkup.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zwtqc/dsh-disk-checkup/issues"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "catalog.js",
+    "scanner.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "docs",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-sidebar"
+      ]
+    }
+  }
+}

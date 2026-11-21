@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Disk checkup",
+    "description": "Scans drive C, lists cleanable items with their sizes, and removes the selected ones in one click from a left-sidebar panel.",
+    "detail": "docs/DETAIL.md"
+  }
+}

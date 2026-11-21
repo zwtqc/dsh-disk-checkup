@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "磁盘体检",
+    "description": "扫描 C 盘，列出可清理项及体积，在左侧边栏面板里勾选后一键清理。",
+    "detail": "docs/DETAIL.md"
+  }
+}
