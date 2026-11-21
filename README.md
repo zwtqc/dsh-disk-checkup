@@ -179,6 +179,29 @@ dsh plugin add git+https://github.com/zwtqc/dsh-disk-checkup
 
 > 装完在左侧导航会多出「磁盘体检」。如果没有，按 `Ctrl + F5` 强刷页面。
 
+### 方式 D：GitHub 访问不了怎么办
+
+国内网络下 `git clone github.com` 经常超时。实测结论：
+
+| 域名 | 可用性 |
+|---|---|
+| `cdn.jsdelivr.net`（索引、图标、源码文件） | ✅ 可用 |
+| `api.github.com` | ✅ 可用 |
+| `raw.githubusercontent.com` | ❌ 基本超时 |
+| `github.com` 的 git 协议（clone / push） | ⚠️ 时通时断 |
+
+所以三件事是分开的：
+
+- **看索引**：走 jsDelivr，没问题
+- **看文档/图标**：走 jsDelivr，没问题
+- **真正安装**（要 `git clone`）：可能失败
+
+git clone 失败时的替代方案：
+
+1. **让作者发布到 npm**，然后 `dsh plugin add dsh-disk-checkup`（走 npmmirror 镜像，国内稳定）
+2. **在能上 GitHub 的网络里下载仓库**，拷到本机，用「方式 B」从本地目录安装
+3. 把仓库**导入 Gitee 等镜像**，从镜像目录安装
+
 ---
 
 ## 使用
