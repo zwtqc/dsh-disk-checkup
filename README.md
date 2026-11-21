@@ -139,11 +139,19 @@ C 盘又只剩 26.6 GB，18 天掉了 **20.85 GB**。
 ### 方式 A：插件市场索引（推荐）
 
 1. 打开 DSH → **Plugins** → **Discover**
-2. 添加索引地址：
+2. 添加索引地址（**国内可用**，走 jsDelivr CDN）：
 
 ```
-https://raw.githubusercontent.com/zwtqc/dsh-disk-checkup/main/index.json
+https://cdn.jsdelivr.net/gh/zwtqc/dsh-disk-checkup@main/index.json
 ```
+
+   想锁定版本就用 `@v1.0.0` 代替 `@main`：
+
+   ```
+   https://cdn.jsdelivr.net/gh/zwtqc/dsh-disk-checkup@v1.0.0/index.json
+   ```
+
+   > ⚠️ 不要用 `raw.githubusercontent.com` 的地址 —— 国内网络基本访问不到。
 
 3. 搜索 `磁盘体检` 或 `disk`，点安装
 4. 重启 DSH（或用 Plugins 页面提示的方式生效）
