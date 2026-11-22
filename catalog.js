@@ -101,17 +101,12 @@ export function catalogItems() {
   add({ id: 'dsh_pending', name: 'DSH 更新包残留', category: 'app', path: path.join(LOCAL, '@deepseek-aidsh-desktop-updater', 'pending'), kind: 'dir', detail: 'DeepSeek Harness 已安装完的更新安装包', impact: '无影响，版本已经是新的' })
   add({ id: 'wx_update', name: '微信升级补丁残留', category: 'app', path: path.join(ROAM, 'Tencent', 'xwechat', 'update'), kind: 'dir', detail: '微信历次升级用的补丁包残留', impact: '无影响；聊天记录不在这个目录里' })
 
-  const chromeApp = path.join(LOCAL, 'Google', 'Chrome', 'Application')
-  try {
-    const vers = fs
-      .readdirSync(chromeApp, { withFileTypes: true })
-      .filter((e) => e.isDirectory() && /^\d+\.\d+\.\d+\.\d+$/.test(e.name))
-      .map((e) => e.name)
-      .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }))
-    for (const v of vers.slice(0, -1)) {
-      add({ id: `oldchrome:${v}`, name: `Chrome 旧版本 ${v}`, category: 'app', path: path.join(chromeApp, v), kind: 'dir', detail: 'Chrome 升级后留下的上一版程序目录', impact: '无影响，当前使用最新版本' })
-    }
-  } catch {}
+  // ⚠️ 刻意不扫描 Chrome 的版本目录（Application\<版本号>\）：
+  // 根目录的 chrome.exe 是一个 stub，它的清单里写死依赖某一个具体版本目录。
+  // 当 Chrome 的自动更新只下载了新 stub（new_chrome.exe）却没完成替换时，
+  // 删掉旧版本目录里的 *.manifest 会让 Chrome 直接报
+  // 「应用程序的并行配置不正确 / Dependent Assembly x.y.z.w could not be found」。
+  // 旧版本由 Chrome 自己的更新器清理，这里不碰。
 
   const programs = path.join(LOCAL, 'Programs')
   try {

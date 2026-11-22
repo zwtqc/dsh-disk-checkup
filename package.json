@@ -1,6 +1,6 @@
 {
   "name": "dsh-disk-checkup",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "description": "C drive health check for DeepSeek Harness: a left-sidebar panel with a visual report and one-click cleanup.",
   "keywords": [
