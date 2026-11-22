@@ -56,12 +56,12 @@
                                      },
                         "versions":  [
                                          {
-                                             "version":  "1.0.0",
-                                             "publishTimestamp":  1795295627,
+                                             "version":  "1.0.1",
+                                             "publishTimestamp":  1795338949,
                                              "source":  {
                                                             "type":  "git",
                                                             "url":  "https://github.com/zwtqc/dsh-disk-checkup",
-                                                            "commit":  "24343285bf7fd30155355ac5aa0d1978d1b6c5d3"
+                                                            "commit":  "338f60d47f31386de97066357ea4476ed572793e"
                                                         },
                                              "engines":  {
                                                              "dsh":  "\u003e=0.2.0"
