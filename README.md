@@ -153,6 +153,9 @@ https://cdn.jsdelivr.net/gh/zwtqc/dsh-disk-checkup@main/index.json
 
    > ⚠️ 不要用 `raw.githubusercontent.com` 的地址 —— 国内网络基本访问不到。
 
+   > **刚发布的版本** `cdn.jsdelivr.net` 可能延迟最多 12 小时（CDN 缓存）。
+   > 想立刻拿到最新版，把域名换成 `fastly.jsdelivr.net` 或 `gcore.jsdelivr.net`，路径不变。
+
 3. 搜索 `磁盘体检` 或 `disk`，点安装
 4. 重启 DSH（或用 Plugins 页面提示的方式生效）
 
